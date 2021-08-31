@@ -1,0 +1,97 @@
+.nav {
+  width: 70%;
+    &__list {
+      display: flex;
+      @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+
+    &__item {
+      margin-right: 45px;
+      position: relative;
+      &_desktop {
+        &:hover {
+          .nav__subnav{
+            display: block;
+            opacity: 1;
+            z-index: 5;
+          }
+          cursor: pointer;
+          .nav__item-link::before {
+            transform: translateY(-50%) rotate(180deg);
+            @media screen and (max-width: $tablet){
+              transform: translateY(-50%) rotate(360deg);
+            }
+          }
+        }
+      }
+      
+      @media screen and (max-width: $large-tablet) {
+        margin-right: 20px;
+      }
+      @media screen and (max-width: $tablet) {
+        margin-bottom: 16px;
+        margin-right: 0;
+      }
+    }
+
+    
+    &__subnav {
+      display: none;
+      transition: opacity 0.5s ease;
+      position: absolute;
+      top: 25px;
+      left: 0;
+      width: 250px;
+      background-color: $white;
+      border-radius: 20px;
+      padding: 20px;
+      cursor: auto;
+      @media screen and (max-width: $tablet) {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    }
+  
+    &__subnav-item {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      .nav__item-link {
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    
+    &__item-link {
+      color: $black;
+      font-weight: 600;
+      &_with-arrow {
+        padding-right: 24px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 7px;
+          background: url(../img/nav-arrow.svg) no-repeat;
+          background-size: cover;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          transition: all 0.5s ease-in-out;
+          @media screen and (max-width: $tablet){
+            transform: translateY(-50%) rotate(270deg);
+          }
+        }
+        
+      }
+    }
+  }

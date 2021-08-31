@@ -1,0 +1,34 @@
+.slide-descr {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(31px);
+    padding: 24px;
+    @media screen and (max-width: $tablet){
+        padding: 16px;
+    }
+}
+.slide-title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 33.6px;
+    font-family: $gilroy-bold;
+    margin-bottom: 8px;
+    @media screen and (max-width: $tablet){
+        font-size: 20px;
+        font-weight: 25px;
+        margin-bottom: 4px;
+    }
+}
+.slide-subtitle {
+    margin: 0;
+    color: $dark-gray;
+    font-weight: 500;
+    margin-bottom: 8px;
+    @media screen and (max-width: $tablet){
+        margin-bottom: 4px;
+    }
+}
+.slide-price {
+    margin: 0;
+    font-size: 20px;
+    font-family: $gilroy-bold;
+}

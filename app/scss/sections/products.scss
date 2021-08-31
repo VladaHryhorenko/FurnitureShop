@@ -1,0 +1,133 @@
+.products{
+    background-color: $white;
+    padding: 44px 0;
+    &__container {
+      max-width: 1600px;
+      @media screen and (max-width: 670px){
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @media screen and (max-width: 580px){
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+      @media screen and (max-width: $small-mobile) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &__prod-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      @media screen and (max-width: $desktop){
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: $tablet){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      @media screen and (max-width: 580px){
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+    }
+    &__prod-block {
+      margin-bottom: 32px;
+    }
+    &__button-block {
+      display: flex;
+      justify-content: center;
+    }
+  
+    &__card-wrapper {
+      position: relative;
+      &:hover {
+        cursor: auto;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 2;
+        }
+        .card__hover-block {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          z-index: 3;
+        }
+        .card__hover-content {
+          width: 100%;
+        }
+        .card__reaction {
+          display: flex;
+          justify-content: space-between;
+          color: $white;
+          &_share {
+            padding-left: 30px;
+            position: relative;
+            background-color: transparent;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 18px;
+              height: 20px;
+              background: url(../img/share.svg) no-repeat;
+              background-size: cover;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            } 
+          }
+          &_like {
+            padding-left: 30px;
+            position: relative;
+            background-color: transparent;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            &::before {
+              content: '';
+              position: absolute;
+              width: 21px;
+              height: 18px;
+              background: url(../img/like-white.svg) no-repeat;
+              background-size: cover;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+        .card__button {
+          cursor: pointer;
+          border-color: transparent;
+          margin-bottom: 24px;
+          max-width: 100%;
+          &:hover {
+            background-color: $black;
+            color: $white;
+            border-color: transparent
+          }
+          &:active {
+            background-color: $light-gray;
+          }
+        }
+      }
+    }
+  
+  }

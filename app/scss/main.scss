@@ -1,0 +1,81 @@
+@import "./helpers/variables";
+@import "./helpers/mixin.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "./components/nav.scss";
+@import "./components/buttons.scss";
+@import "./components/slider.scss";
+@import "./components/subslider.scss";
+@import "./components/card.scss";
+@import './components/burger.scss';
+@import "./components/titles.scss";
+@import "./components/logo.scss";
+@import "./components/search-form.scss";
+@import "./layout/header.scss";
+@import "./sections/intro.scss";
+@import "./sections/products.scss";
+@import "./sections/inspiration.scss";
+@import "./sections/statistic.scss";
+@import "./sections/tips.scss";
+@import "./layout/footer.scss";
+@import "./sections/share.scss";
+
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-decoration: none;
+  font-family: $gilroy-normal;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  min-width: 290px;
+  background-color: $white;
+  color: $black;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 140px;
+  @media screen and (max-width: $desktop) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @media screen and (max-width: $large-mobile) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @media screen and (max-width: $mobile) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

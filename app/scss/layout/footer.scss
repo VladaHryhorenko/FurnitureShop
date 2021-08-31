@@ -1,0 +1,178 @@
+.footer {
+    background-color: $white;
+    padding: 80px 0px 50px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 90%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        background-color: $white-gray;
+    }
+    &__content-holder {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media screen and (max-width: $desktop){
+            flex-wrap: wrap;
+        }
+    }
+    &__info-block {
+        width: 25%;
+        margin-right: 30px;
+        @media screen and (max-width: $desktop){
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: $large-mobile){
+            width: 100%;
+            
+        }
+    }
+    &__info-logo {
+        margin-bottom: 16px;
+    }
+    &__info-descr {
+        margin: 0;
+        margin-bottom: 16px;
+        color: $dark-gray;
+        margin-bottom: 16px;
+    }
+    &__location-block {
+        padding-left: 26px;
+        position: relative;
+        margin-bottom: 16px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 19px;
+            background: url(../../img/location.svg) no-repeat;
+            background-size: cover;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    }
+    &__phone-block {
+        padding-left: 26px;
+        position: relative;
+        margin-bottom: 16px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: url(../../img/phone.svg) no-repeat;
+            background-size: cover;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    }
+    &__nav-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media screen and (max-width: $desktop){
+            order: 2;
+            width: 60%;
+            
+        }
+        @media screen and (max-width: $tablet){
+            width: 100%;
+            
+        }
+        @media screen and (max-width: $large-mobile){
+            flex-direction: column;
+        }
+    }
+    &__nav-list {
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+        
+    }
+    &__nav-item {
+        margin-bottom: 16px;
+    }
+    &__title {
+        display: inline-block;
+        color: $black;
+        font-size: 24px;
+        line-height: 29px;
+        font-family: $gilroy-bold;
+        &_form {
+            margin-bottom: 16px;
+        }
+    }
+    &__nav-link {
+        color: $dark-gray;
+        font-weight: 500;
+        &:hover {
+            border-bottom: 1px solid $dark-gray;
+        }
+        &:active {
+            color: $orange;
+            border-bottom: 1px solid $orange;
+        }
+    }
+
+    &__form-block {
+        @media screen and (max-width: $large-mobile){
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: $small-mobile){
+            width: 100%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        @media screen and (max-width: $small-mobile){
+            flex-direction: column;
+        }
+    }
+
+    &__form-input {
+        background-color: $card-bg;
+        padding: 10px 12px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        line-height: 1.5;
+        @media screen and (max-width: $small-mobile){
+            width: 100%;
+            margin-bottom: 4px;
+        }
+    }
+
+    &__form-button {
+        width: 45px;
+        height: 45px;
+        background-color: $orange;
+        position: relative;
+        border: none;
+        margin-left: 4px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url(../../img/send.svg) no-repeat;
+            background-size: cover;
+        }
+
+        @media screen and (max-width: $small-mobile){
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.card {
+    display: block;
+    background-color: $card-bg;
+    position: relative;
+    &__hover-block {
+      display: none;
+    }
+    
+    &__descr {
+      padding: 16px 16px 32px;
+    }
+    &__img-wrapper {
+      width: 100%;
+      //height: 300px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__title{
+      margin: 0;
+      font-family: $gilroy-bold;
+      margin-bottom: 8px;
+      color: $black;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__subtitle {
+      margin: 0;
+      margin-bottom: 8px;
+      color: $light-gray;
+    }
+    &__price {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__curr-price {
+      font-family: $gilroy-bold;
+      color: $black;
+    }
+    &__prev-price {
+      text-decoration: line-through;
+      color: $light-gray2;
+    }
+    &__info {
+      width: 48px;
+      height: 48px;
+      color: $white;
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &_discount {
+        background-color: $red;
+      }
+      &_new {
+        background-color: $green;
+      }
+    }
+  }

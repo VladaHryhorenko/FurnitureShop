@@ -1,0 +1,53 @@
+$mobile: 520px;
+$large-tablet: 1200px;
+$tablet: 1001px;
+$small-tablet: 800px;
+$desktop: 1400px;
+$large-desktop: 1900px;
+$extralarge-desktop: 2300px;
+$large-mobile: 767px;
+$small-mobile: 374px;
+$white: #fff;
+$orange: #E89F71;
+$sand: #F9F1E7;
+$milk-white: #FCF8F3;
+$black: #3A3A3A;
+$light-gray: #898989;
+$dark-gray: #616161;
+$white-gray: #D8D8D8;
+$card-bg: #F4F5F7;
+$light-gray2: #B0B0B0;
+$red: #E97171;
+$green: #2EC1AC;
+$milk: #FCF8F3;
+$dark-blue: #262F56;
+
+
+
+
+@font-face {
+    font-family: "Avenir Next Cyr Bold";
+    src: url('../fonts/AvenirNextCyr-Bold.woff2') format('woff2'),
+    url('../fonts/AvenirNextCyr-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url('../fonts/Gilroyextrabold.woff2') format('woff2'),
+    url('../fonts/Gilroyextrabold.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Gilroy Normal";
+    src: url('../fonts/Gilroylight.woff2') format('woff2'),
+    url('../fonts/Gilroylight.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+$gilroy-bold: 'Gilroy Bold', Arial, Helvetica, sans-serif;
+$gilroy-normal: "Gilroy Normal", Arial, Helvetica, sans-serif;

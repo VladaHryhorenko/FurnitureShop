@@ -1,0 +1,79 @@
+.statistic {
+    background-color: $white;
+    padding: 88px 0 44px 0px;
+    &__container {
+      max-width: 1600px;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media screen and (max-width: $desktop){
+        justify-content: center;
+      }
+    }
+    &__item-wrapper {
+      @media screen and (max-width: $desktop){
+        width: 300px;
+      }
+    }
+    &__item{
+      padding: 16px 8px 16px 64px;
+      position: relative;
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @media screen and (max-width: $desktop){
+        margin-bottom: 5px;
+        &:last-child {
+          margin-right: 30px;
+        }
+      }
+      @media screen and (max-width: $large-mobile){
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 40px;
+        background: url(../img/quality.svg) no-repeat;
+        background-size: cover;
+        top: 16px;
+        left: 0;
+      }
+      &_2 {
+        &::before {
+          width: 40px;
+          height: 39px;
+          background: url(../img/protection.svg) no-repeat;
+        }
+      }
+      &_3 {
+        &::before {
+          width: 40px;
+          height: 38px;
+          background: url(../img/free-shipping.svg) no-repeat;
+        }
+      }
+      &_4 {
+        &::before {
+          width: 36px;
+          height: 40px;
+          background: url(../img/support.svg) no-repeat;
+        }
+      }
+    }
+    &__title {
+      margin: 0;
+      font-size: 18px;
+      font-family: $gilroy-bold;
+      margin-bottom: 2px;
+    }
+    &__subtitle {
+      color: $light-gray;
+    }
+  }
